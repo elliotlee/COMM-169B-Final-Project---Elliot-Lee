@@ -41,6 +41,8 @@ public class bearhavior : MonoBehaviour
             if (happy > 0)
             {
                 happy -= Time.deltaTime;
+                m_Animator.SetFloat("happiness", happy);
+                Debug.Log("adjusting happiness!");
                 //DisplayTime(happy);
 
                 /*if (Input.GetButtonDown("Trigger")) find a different way to do this
@@ -74,7 +76,7 @@ public class bearhavior : MonoBehaviour
 
     void swapRagdoll()
     {
-        playerModel.SetActive(false);
+        //playerModel.SetActive(false);
         playerRagdoll.transform.position = playerModel.transform.position;
         playerRagdoll.transform.position += new Vector3(0, 4f, 4f);
         playerRagdoll.SetActive(true);

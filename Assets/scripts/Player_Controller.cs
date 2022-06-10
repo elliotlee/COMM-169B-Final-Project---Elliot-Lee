@@ -31,10 +31,8 @@ public class Player_Controller : MonoBehaviour
     private void FixedUpdate()
     {
 
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);     
-                // Z value is left at 0.0 because it will be handled by the physics from the rigidbody
+        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+        // Z value is left at 0.0 because it will be handled by the physics from the rigidbody
         rb.AddForce(movement * 2 * speed);  // a force is applied to the rigidbody in the direction our new Vector3 vector is going.
     }
-        
-   
 }
